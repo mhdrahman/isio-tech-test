@@ -1,6 +1,6 @@
-﻿namespace GildedRoseKata.Updaters;
+﻿namespace GildedRoseKata.Strategies;
 
-public class AgedBrieUpdater : IItemUpdater
+public class NormalUpdater : IItemUpdater
 {
     public bool CanHandle(Item item)
     {

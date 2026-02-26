@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using GildedRoseKata.Updaters;
+using GildedRoseKata.Strategies;
 
 namespace GildedRoseKata;
 

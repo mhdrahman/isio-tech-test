@@ -1,4 +1,4 @@
-﻿namespace GildedRoseKata.Updaters;
+﻿namespace GildedRoseKata.Strategies;
 
 public interface IItemUpdater
 {

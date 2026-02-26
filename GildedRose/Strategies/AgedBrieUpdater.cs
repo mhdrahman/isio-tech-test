@@ -1,6 +1,6 @@
-﻿namespace GildedRoseKata.Updaters;
+﻿namespace GildedRoseKata.Strategies;
 
-public class SulfurasUpdater : IItemUpdater
+public class AgedBrieUpdater : IItemUpdater
 {
     public bool CanHandle(Item item)
     {
