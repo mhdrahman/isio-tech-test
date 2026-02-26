@@ -11,6 +11,10 @@ public class AgedBrieUpdater : IItemUpdater
         item.IncreaseQualityBy(1);
         item.SellIn--;
         
-        // TODO: Might be missing some logic here...
+        // Match original implementation 
+        if (item.PastSellByDate())
+        {
+            item.IncreaseQualityBy(1);
+        }
     }
 }
