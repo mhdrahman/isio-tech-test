@@ -10,14 +10,14 @@ public class BackstagePassUpdater : IItemUpdater
     {
         switch (item.SellIn)
         {
-            case < 4:
+            case > 7:
+                item.IncreaseQualityBy(1);
+                break;
+            case > 2:
                 item.IncreaseQualityBy(3);
                 break;
-            case < 6:
-                item.IncreaseQualityBy(4);
-                break;
             default:
-                item.IncreaseQualityBy(1);
+                item.IncreaseQualityBy(4);
                 break;
         }
         
