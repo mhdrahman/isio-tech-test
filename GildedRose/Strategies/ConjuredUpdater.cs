@@ -4,6 +4,8 @@ namespace GildedRoseKata.Strategies;
 
 public class ConjuredUpdater : IItemUpdater
 {
+    public static readonly ConjuredUpdater Instance = new();
+    
     public bool CanHandle(Item item) => item.Name.StartsWith("Conjured");
 
     public void Update(Item item)

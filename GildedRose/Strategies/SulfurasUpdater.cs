@@ -2,7 +2,9 @@
 
 public class SulfurasUpdater : IItemUpdater
 {
-    public bool CanHandle(Item item) => item.Name ==  "Sulfuras, Hand of Ragnaros";
+    public static readonly SulfurasUpdater Instance = new();
+    
+    public bool CanHandle(Item item) => item.Name == "Sulfuras, Hand of Ragnaros";
 
     public void Update(Item item)
     {

@@ -4,6 +4,8 @@ namespace GildedRoseKata.Strategies;
 
 public class NormalUpdater : IItemUpdater
 {
+    public static readonly NormalUpdater Instance = new();
+    
     // Default updater can handle all items.
     public bool CanHandle(Item item) => true;
 

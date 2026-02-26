@@ -4,6 +4,8 @@ namespace GildedRoseKata.Strategies;
 
 public class AgedBrieUpdater : IItemUpdater
 {
+    public static readonly AgedBrieUpdater Instance = new();
+    
     public bool CanHandle(Item item) => item.Name == "Aged Brie";
 
     public void Update(Item item)

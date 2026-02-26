@@ -4,6 +4,8 @@ namespace GildedRoseKata.Strategies;
 
 public class BackstagePassUpdater : IItemUpdater
 {
+    public static readonly BackstagePassUpdater Instance = new();
+    
     public bool CanHandle(Item item) => item.Name == "Backstage passes to a TAFKAL80ETC concert";
 
     public void Update(Item item)
