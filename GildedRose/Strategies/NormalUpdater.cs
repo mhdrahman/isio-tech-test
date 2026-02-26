@@ -1,14 +1,21 @@
-﻿namespace GildedRoseKata.Strategies;
+﻿using GildedRoseKata.Helpers;
+
+namespace GildedRoseKata.Strategies;
 
 public class NormalUpdater : IItemUpdater
 {
-    public bool CanHandle(Item item)
-    {
-        throw new System.NotImplementedException();
-    }
+    // Default updater can handle all items.
+    public bool CanHandle(Item item) => true;
 
     public void Update(Item item)
     {
-        throw new System.NotImplementedException();
+        item.DecreaseQualityBy(1);
+        item.SellIn -= 1;
+
+        // If it's expired, take another point off quality
+        if (item.PastSellByDate())
+        {
+            item.DecreaseQualityBy(1);
+        }
     }
 }
