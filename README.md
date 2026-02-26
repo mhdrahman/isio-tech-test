@@ -1,4 +1,15 @@
-# Gilded Rose starting position in C# xUnit
+# Gilded Rose
+
+## Adding/updating an item type
+
+Item behaviour is defined in `./GildedRose/Strategies/`. To support a new item type:
+- Create a new strategy in the above folder which implements IItemupdater
+- Expose a public static readonly singleton instance e.g. `public static readonly FooUpdater Instance = new();`
+- Implement:
+  - `CanHandle(Item item)` this should return true only for this item based on some criteria, typically name
+  - `Update(Item item)` this should apply the rules for the item like updating quality and sell in. **Ensure you use helpers provided in `ItemExtensions.cs` where possible**.
+- Register the strategy in `./GildedRose/ItemUpdater.cs`
+- Add or update the tests in `./GildedRoseTests/`
 
 ## Build the project
 
