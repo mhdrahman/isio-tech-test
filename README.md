@@ -3,7 +3,7 @@
 ## Adding/updating an item type
 
 Item behaviour is defined in `./GildedRose/Strategies/`. To support a new item type:
-- Create a new strategy in the above folder which implements IItemupdater
+- Create a new strategy in the above folder which implements IItemUpdater
 - Expose a public static readonly singleton instance e.g. `public static readonly FooUpdater Instance = new();`
 - Implement:
   - `CanHandle(Item item)` this should return true only for this item based on some criteria, typically name

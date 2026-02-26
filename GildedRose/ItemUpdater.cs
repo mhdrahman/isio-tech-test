@@ -7,6 +7,7 @@ namespace GildedRoseKata;
 public static class ItemUpdater
 {
     // We use static instances here to avoid creating new instances every time.
+    // Note that we could use reflection to register all instances of IItemUpdater but feels like unnecessary complexity.
     private static readonly List<IItemUpdater> ItemUpdaters =
     [
         AgedBrieUpdater.Instance,
