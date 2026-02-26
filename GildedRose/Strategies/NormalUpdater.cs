@@ -10,9 +10,8 @@ public class NormalUpdater : IItemUpdater
     public void Update(Item item)
     {
         item.DecreaseQualityBy(1);
-        item.SellIn -= 1;
+        item.SellIn--;
 
-        // If it's expired, take another point off quality
         if (item.PastSellByDate())
         {
             item.DecreaseQualityBy(1);

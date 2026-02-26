@@ -1,14 +1,19 @@
-﻿namespace GildedRoseKata.Strategies;
+﻿using GildedRoseKata.Helpers;
+
+namespace GildedRoseKata.Strategies;
 
 public class ConjuredUpdater : IItemUpdater
 {
-    public bool CanHandle(Item item)
-    {
-        throw new System.NotImplementedException();
-    }
+    public bool CanHandle(Item item) => item.Name.StartsWith("Conjured");
 
     public void Update(Item item)
     {
-        throw new System.NotImplementedException();
+        item.DecreaseQualityBy(2);
+        item.SellIn--;
+
+        if (item.PastSellByDate())
+        {
+            item.DecreaseQualityBy(2);
+        }
     }
 }

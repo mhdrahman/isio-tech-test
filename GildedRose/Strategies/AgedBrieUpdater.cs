@@ -1,14 +1,16 @@
-﻿namespace GildedRoseKata.Strategies;
+﻿using GildedRoseKata.Helpers;
+
+namespace GildedRoseKata.Strategies;
 
 public class AgedBrieUpdater : IItemUpdater
 {
-    public bool CanHandle(Item item)
-    {
-        throw new System.NotImplementedException();
-    }
+    public bool CanHandle(Item item) => item.Name == "Aged Brie";
 
     public void Update(Item item)
     {
-        throw new System.NotImplementedException();
+        item.IncreaseQualityBy(1);
+        item.SellIn--;
+        
+        // TODO: Might be missing some logic here...
     }
 }
